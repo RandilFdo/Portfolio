@@ -1,0 +1,493 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: black;
+    color: #e7e7e7;
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+.image-gradient{
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity:0.5;
+    z-index: -1;
+}
+
+.layer-blur {
+    height: 0;
+    width: 30rem;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    box-shadow: 0 0 700px 15px white;
+    rotate: -30deg;
+    z-index: -1;
+}
+
+/*CONTAINER*/
+.container{
+    position: relative;
+    overflow: hidden;
+}
+
+/*HEADER*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+}
+
+header h1{
+    margin: 0;
+    font-size: 3rem;
+    font-weight:300;
+}
+
+nav{
+    display: flex;
+    align-items:center;
+    gap: 3rem;
+    margin-left: -5%; 
+}
+
+nav a{
+    
+    font-size: 1rem;
+    letter-spacing:0.1rem;
+    transition: color 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+    z-index: 999;
+}
+
+nav a:hover {
+    color: #a7a7a7;
+}
+
+.btn-signing {
+    background-color: #a7a7a7;
+    color: black;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.btn-signing:hover {
+    background-color: white;
+}
+
+/*MAIN CONTENT*/
+
+main{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(90vh - 6rem);
+}
+
+.content{
+    max-width: 40rem;
+    margin-left: 10%;
+    z-index: 999;
+}
+
+/* Homepage Styles */
+.tag-box {
+    position: relative;
+    width: 18rem;
+    height: 2.5rem;
+    border-radius:50px;
+    background: linear-gradient(to right, #656565 , #7f42a7 , #6600c5 , #5300a0 , #757575 , #656565);
+    background-size: 200%;
+    animation: gradient 2.5s linear infinite;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% }
+    100% { background-position: 200% }
+}
+
+.tag-box .tag{
+    position: absolute;
+    inset: 3px 3px 3px 3px;
+    background-color: black;
+    border-radius:50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.tag-box .tag:hover{
+    color: #5300a0;
+}
+
+.content h1{
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin: 2rem 0;
+    line-height: 1.2;
+    text-shadow: 0 0 10px rgba(128, 128, 128, 0.418);
+}
+
+.description {
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    max-width:35rem;
+    color: grey;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.btn-get-started{
+    text-decoration: none;
+    border: 1px solid #2a2a2a;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    transition: background-color 0.2s ease;
+}
+
+.btn-get-started:hover {
+    background-color: #1a1a1a;
+}
+
+.btn-signing-main{
+    text-decoration: none;
+    background-color: lightgray;
+    color: black;
+    padding: 0.6rem 2.5rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    transition: background-color;
+}
+
+.btn-signing-main:hover {
+    background-color: gray;
+}
+
+.robot-3d {
+    position: absolute;
+    top: 0;
+    right: -15%;
+}
+
+/* About Page */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    margin-top: 5rem;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.skill-tags span {
+    background: #2a2a2a;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+/* Projects Page */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+.project-card {
+    background: #1a1a1a;
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid #2a2a2a;
+}
+
+.tech-tag {
+    background: #7f42a7;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+/* Contact Page */
+.contact-form {
+    max-width: 600px;
+    margin: 5rem auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 1300px) {
+    header{
+        padding: 1rem 0.5rem
+    }
+
+    .content {
+        margin-top: 85%;
+    }
+
+    .robot-3d{
+        scale: 0.8;
+        top: -20%;
+        right: 2%;
+    }
+}
+
+@media (max-width: 768px) {
+    header{
+        padding: 1rem 0.1rem
+    }
+
+    nav{
+        display: none;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .btn-signing{
+        padding: 0.6rem 1.5rem;
+    }
+    .content {
+        margin-top: 25rem;
+    }
+
+    .robot-3d{
+        scale: 0.5;
+        top: -25%;
+        right: 0;
+    }
+
+    .content {
+        max-width: 30rem;
+        margin-left: 10%;
+    }
+
+    .tag-box{
+        width: 12rem;
+    }
+
+    .content h1{
+        font-size: 2.5rem;
+    }
+
+    .description{
+        font-size: 1rem;
+    }
+
+    .btn-get-started{
+        font-size: 0.8rem;
+        padding: 0.5rem 1.2rem;
+    }
+
+    .btn-signing-main{
+        font-size: 0.8rem;
+        padding: 0.8rem 2rem;
+    }
+
+    nav {
+        gap: 2rem;
+        position: static;
+        transform: none;
+        justify-content: center;
+        margin: 1rem 0;
+    }
+    
+    .about-content,
+    .project-grid {
+        padding: 2rem;
+    }
+}
+
+/* Add these new styles at the bottom of your existing CSS */
+
+/* Centered Navigation */
+nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 4rem;
+}
+
+/* Page Transition Animation */
+.content-section {
+    animation: pageFade 0.8s ease forwards;
+    opacity: 0;
+}
+
+@keyframes pageFade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* About Page Enhancements */
+.about-content {
+    padding: 4rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bio h2 {
+    font-size: 3rem;
+    background: linear-gradient(45deg, #7f42a7, #5300a0);
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2rem;
+}
+
+.skill-tags span {
+    background: linear-gradient(45deg, #5300a0, #7f42a7);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+.skill-tags span:hover {
+    transform: translateY(-3px);
+}
+
+/* Projects Page Enhancements */
+.project-grid {
+    padding: 4rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 20px;
+    border: 1px solid #2a2a2a;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, #7f42a755, transparent);
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(127, 66, 167, 0.3);
+}
+
+.tech-tag {
+    background: linear-gradient(45deg, #5300a0, #7f42a7);
+    color: white;
+    padding: 0.3rem 1.2rem;
+    border-radius: 20px;
+}
+
+/* Contact Page Enhancements */
+.contact-form {
+    max-width: 600px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid #2a2a2a;
+}
+
+.contact-form h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    background: linear-gradient(45deg, #7f42a7, #5300a0);
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background: rgba(42, 42, 42, 0.3);
+    border: 1px solid #2a2a2a;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #7f42a7;
+    box-shadow: 0 0 15px rgba(127, 66, 167, 0.3);
+}
+
+/* Add this at the BOTTOM of your CSS file */
+nav {
+    position: static !important;
+    transform: none !important;
+    gap: 2.5rem;
+    margin-left: 0;
+}
+
+nav a {
+    position: relative;
+    padding: 0.5rem 0;
+    display: inline-block;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #7f42a7;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+header {
+    position: relative;
+    z-index: 1000;
+}
