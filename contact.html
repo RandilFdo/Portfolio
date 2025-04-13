@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Randil Fernando</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <img class="image-gradient" src="gradient.png" alt="gradient">
@@ -19,20 +20,67 @@
                 <a href="projects.html">PROJECTS</a>
                 <a href="contact.html">CONTACT</a>
             </nav>
-            <button class="btn-signing">HIRE ME</button>
+            <form action="hire.html">
+                <button data-aos="fade-down" data-aos-duration="1500" class="btn-signing">HIRE ME</button>
+            </form>
         </header>
 
-        <main class="page-content">
-            <div class="contact-form">
-                <h2>Get in Touch</h2>
-                <form>
-                    <input type="text" placeholder="Name">
-                    <input type="email" placeholder="Email">
-                    <textarea placeholder="Message"></textarea>
-                    <button class="btn-signing">Send Message</button>
-                </form>
+        <main class="page-content" data-aos="fade-up" data-aos-duration="800">
+            <div class="contact-section">
+                <div class="contact-info">
+                    <h2 class="gradient-text">Let's Create<br>Something Amazing</h2>
+                    <div class="contact-methods">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope-open-text"></i>
+                            <div>
+                                <h3>Shoot an Email</h3>
+                                <a href="mailto:randilfernando829@gmail.com">randilfernando829@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-share-nodes"></i>
+                            <div>
+                                <h3>Social Channels</h3>
+                                <div class="social-mini">
+                                    <a href="https://linkedin.com/in/randil-fernando-01839628a" target="_blank">
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                    <a href="https://kaggle.com/randilfdo" target="_blank">
+                                        <i class="fab fa-kaggle"></i>
+                                    </a>
+                                    <a href="https://leetcode.com/u/RandilFernando/" target="_blank">
+                                        <i class="fas fa-code"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                            <i class="fas fa-at"></i>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                            <i class="fas fa-comment-dots"></i>
+                        </div>
+                        <button class="btn-signing">
+                            Send Message
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
             </div>
         </main>
     </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init({once: true});</script>
 </body>
 </html>
