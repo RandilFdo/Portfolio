@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Randil Fernando</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <img class="image-gradient" src="gradient.png" alt="gradient">
@@ -19,26 +20,97 @@
                 <a href="projects.html">PROJECTS</a>
                 <a href="contact.html">CONTACT</a>
             </nav>
-            <button class="btn-signing">HIRE ME</button>
+            <form action="hire.html">
+                <button data-aos="fade-down" data-aos-duration="1500" class="btn-signing">HIRE ME</button>
+            </form>
         </header>
 
-        <main class="page-content">
+        <main class="page-content" data-aos="fade-up" data-aos-duration="800">
             <div class="about-grid">
-                <div>
-                    <h2>About Me</h2>
-                    <p>Passionate Computer Science student with expertise in full-stack development...</p>
+                <div class="profile-section">        
+                    <div class="profile-header">
+                        <div class="profile-image">
+                            <div class="image-container">
+                                <!-- Purple B&W Version (default) -->
+                                <img src="bw-purple.png" class="default-img" alt="Randil B&W">
+                            </div>
+                        </div>
+                        <div class="gradient-heading">
+                            <h2>Randil Fernando</h2>
+                            <p class="subtitle">Computer Science Student @ IIT</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bio-card">
+                        <h3 class="section-title">📚 Education</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <h4>BSc (Hons) Computer Science</h4>
+                                <p>University of Westminster (Expected 2028)</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h4>Foundation Certificate</h4>
+                                <p>Informatics Institute of Technology</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h3 class="section-title">🔗 Connect</h3>
+                        <div class="social-grid">
+                            <a href="https://linkedin.com/in/randil-fernando-01839628a" target="_blank" class="social-item">
+                                <i class="fab fa-linkedin"></i>
+                                LinkedIn
+                            </a>
+                            <a href="https://kaggle.com/randilfdo" target="_blank" class="social-item">
+                                <i class="fab fa-kaggle"></i>
+                                Kaggle
+                            </a>
+                            <a href="https://leetcode.com/u/RandilFernando/" target="_blank" class="social-item">
+                                <i class="fas fa-code"></i>
+                                LeetCode
+                            </a>
+                            <a href="mailto:randilfernando829@gmail.com" class="social-item">
+                                <i class="fas fa-envelope"></i>
+                                Email
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <h3>Skills</h3>
-                    <div class="skill-tags">
-                        <span>Python</span>
-                        <span>Java</span>
-                        <span>HTML/CSS</span>
-                        <span>Data Analysis</span>
+
+                <div class="skills-section">
+                    <div class="skills-card">
+                        <h3 class="section-title"> 🔨 Technical Arsenal</h3>
+                        <div class="skill-category">
+                            <h4>Languages</h4>
+                            <div class="skill-tags">
+                                <span>Python</span>
+                                <span>Java</span>
+                                <span>HTML/CSS</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Tools & Frameworks</h4>
+                            <div class="skill-tags">
+                                <span>Pandas</span>
+                                <span>NumPy</span>
+                                <span>Matplotlib</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Specializations</h4>
+                            <div class="skill-tags">
+                                <span>Data Analysis</span>
+                                <span>Script Automation</span>
+                                <span>Responsive Design</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </main>
     </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init({once: true});</script>
 </body>
 </html>
